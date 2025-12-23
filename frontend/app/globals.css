@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 220 60% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 60% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 60% 12%;
+
+    --primary: 220 70% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 30% 93%;
+    --muted-foreground: 220 20% 50%;
+
+    --accent: 45 95% 55%;
+    --accent-foreground: 220 60% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 70% 25%;
+
+    --secure: 145 65% 45%;
+    --secure-foreground: 0 0% 100%;
+
+    --radius: 0.75rem;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(220 70% 25%), hsl(180 60% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 30% 97%));
+    
+    --shadow-float: 0 10px 30px -5px hsl(220 70% 25% / 0.2);
+    --shadow-lock: 0 0 20px hsl(145 65% 45% / 0.3);
+  }
+
+  .dark {
+    --background: 220 60% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 50% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 50% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 180 60% 45%;
+    --primary-foreground: 220 60% 8%;
+
+    --secondary: 220 40% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 40% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 45 95% 55%;
+    --accent-foreground: 220 60% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
+    --ring: 180 60% 45%;
+    
+    --secure: 145 65% 50%;
+    --secure-foreground: 220 60% 8%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(220 60% 15%), hsl(180 60% 25%));
+    --gradient-card: linear-gradient(180deg, hsl(220 50% 12%), hsl(220 50% 10%));
+    
+    --shadow-float: 0 10px 30px -5px hsl(0 0% 0% / 0.5);
+    --shadow-lock: 0 0 25px hsl(145 65% 50% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes lock-glow {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px hsl(145 65% 45%));
+  }
+  50% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 8px hsl(145 65% 45%));
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-lock-glow {
+  animation: lock-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-card {
+  background: var(--gradient-card);
+}
+
+.shadow-float {
+  box-shadow: var(--shadow-float);
+}
+
+.shadow-lock {
+  box-shadow: var(--shadow-lock);
+}
+
+.zama-bg {
+  background-color: #ffd200;
+}
