@@ -266,8 +266,8 @@ export const useFHECounter = (parameters: {
     }
 
     if (countHandle === ethers.ZeroHash) {
-      setClearCount({ handle: countHandle, clear: BigInt(0) });
-      clearCountRef.current = { handle: countHandle, clear: BigInt(0) };
+      setClearCount({ handle: countHandle, value: 0 });
+      clearCountRef.current = { handle: countHandle, value: 0 };
       return;
     }
 
@@ -326,14 +326,14 @@ export const useFHECounter = (parameters: {
           return;
         }
 
-        setClearCount({ handle: thisCountHandle, clear: res[thisCountHandle] });
+        setClearCount({ handle: thisCountHandle, value: Number(res[thisCountHandle]) });
         clearCountRef.current = {
           handle: thisCountHandle,
-          clear: res[thisCountHandle],
+          value: Number(res[thisCountHandle]),
         };
 
         setMessage(
-          "Count handle clear value is " + clearCountRef.current.clear
+          "Count handle clear value is " + clearCountRef.current.value
         );
       } finally {
         isDecryptingRef.current = false;
@@ -482,7 +482,7 @@ export const useFHECounter = (parameters: {
     refreshCountHandle,
     isDecrypted,
     message,
-    clear: clearCount?.clear,
+    value: clearCount?.value,
     handle: countHandle,
     isDecrypting,
     isRefreshing,

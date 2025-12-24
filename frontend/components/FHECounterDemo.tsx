@@ -153,7 +153,7 @@ export const FHECounterDemo = () => {
         {printProperty("countHandle", fheCounter.handle)}
         {printProperty(
           "clear countHandle",
-          fheCounter.isDecrypted ? fheCounter.clear : "Not decrypted"
+          fheCounter.isDecrypted ? fheCounter.value : "Not decrypted"
         )}
       </div>
       <div className="grid grid-cols-2 mx-20 gap-4">
@@ -165,7 +165,7 @@ export const FHECounterDemo = () => {
           {fheCounter.canDecrypt
             ? "Decrypt"
             : fheCounter.isDecrypted
-              ? `Decrypted clear counter value is ${fheCounter.clear}`
+              ? `Decrypted clear counter value is ${fheCounter.value}`
               : fheCounter.isDecrypting
                 ? "Decrypting..."
                 : "Nothing to decrypt"}
