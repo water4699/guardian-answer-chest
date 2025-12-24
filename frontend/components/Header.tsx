@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { ConnectWalletTopRight } from "./ConnectWalletTopRight";
-import { Shield, Upload, History, Home, Menu, X } from "lucide-react";
+import { Upload, History, Home, Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },

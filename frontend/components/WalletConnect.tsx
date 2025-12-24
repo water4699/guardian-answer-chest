@@ -9,7 +9,7 @@ import { injected } from "wagmi/connectors";
 
 export const WalletConnect = () => {
   const { address, isConnected } = useAccount();
-  const { connect, isPending } = useConnect();
+  const { connect } = useConnect();
   const { disconnect } = useDisconnect();
 
   const handleConnect = () => {

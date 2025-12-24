@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Lock, Upload, FileText, AlertCircle, Shield, CheckCircle } from "lucide-react";
+import { Lock, Upload, FileText, Shield } from "lucide-react";
 import { toast } from "sonner";
 import { useExamVault } from "@/hooks/useExamVault";
 import { useMetaMaskEthersSigner } from "@/hooks/metamask/useMetaMaskEthersSigner";

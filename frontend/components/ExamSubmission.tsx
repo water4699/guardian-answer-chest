@@ -17,7 +17,6 @@ import { useAccount } from "wagmi";
 export const ExamSubmission = () => {
   const [examTitle, setExamTitle] = useState("");
   const [answer, setAnswer] = useState("");
-  const [isSubmittingLocal, setIsSubmittingLocal] = useState(false);
   
   const { isConnected } = useAccount();
   const { 
